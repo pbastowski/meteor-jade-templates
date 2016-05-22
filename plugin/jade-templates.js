@@ -25,7 +25,7 @@ function compile(file) {
     var inputFile = file.getPathInPackage();
 
     var moduleName = inputFile.replace(/\\/g, '/').replace('.jade', '');
-    var path = moduleName + '.html';
+    var path = moduleName + '.jade';
     var output = content;
 
     try {

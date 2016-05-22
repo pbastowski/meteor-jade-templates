@@ -21,7 +21,7 @@ You can then import the HTML text directly into your app and use it like this:
 **/imports/client/app.ts**
 
 ```javascript
-import tplApp from './app.html';
+import tplApp from './app.jade';
 
 import { Component } from '@angular/core';
 
@@ -33,8 +33,11 @@ export class App {
 }
 ```
 
-
 ## Changelog
+
+### v0.0.2
+
+Changed the output file extension (the one that you import from) from `.html` to `.jade`. This removes the "magic" extension change and allows for having an `.html` file with the same name in the same folder.
 
 ### v0.0.1
 
