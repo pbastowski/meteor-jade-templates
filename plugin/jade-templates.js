@@ -29,6 +29,7 @@ function compile(file) {
     var output = content;
 
     try {
+        jadeOpts.filename = file.getPathInPackage();
         output = jade.compile(content, jadeOpts)();
         output = 'module.exports = { default: "' + clean(output) + '"};';
         // output = buildTemplate(output, moduleName);
