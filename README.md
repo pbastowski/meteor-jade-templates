@@ -35,6 +35,10 @@ export class App {
 
 ## Changelog
 
+### v0.0.3
+
+Fix for https://github.com/pbastowski/meteor-jade-templates/pull/2
+
 ### v0.0.2
 
 Changed the output file extension (the one that you import from) from `.html` to `.jade`. This removes the "magic" extension change and allows for having an `.html` file with the same name in the same folder.
