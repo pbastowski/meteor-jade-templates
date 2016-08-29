@@ -31,7 +31,7 @@ function compile(file) {
     try {
         jadeOpts.filename = inputFile;
         output = jade.compile(content, jadeOpts)();
-        output = 'module.exports = { default: "' + clean(output) + '"};';
+        output = 'exports[\'default\'] = "' + clean(output) + '"; module.exports = exports.default;';
         // output = buildTemplate(output, moduleName);
 
     } catch (er) {
