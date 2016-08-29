@@ -35,6 +35,10 @@ export class App {
 
 ## Changelog
 
+### v0.0.4 - 29 Aug 2016
+ 
+Fix for default imports problem when using Babel instead of TypeScript.
+ 
 ### v0.0.3
 
 Fix for https://github.com/pbastowski/meteor-jade-templates/pull/2
