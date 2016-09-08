@@ -31,8 +31,12 @@ function compile(file) {
     try {
         jadeOpts.filename = inputFile;
         output = jade.compile(content, jadeOpts)();
-        output = 'exports[\'default\'] = "' + clean(output) + '"; module.exports = exports[\'default\']';
-        // output = buildTemplate(output, moduleName);
+
+        if (output.trim()) {
+            output = 'exports.default = "' + clean(output) + '";' + '\n'
+            + 'module.exports = exports.default;' + '\n'
+            + 'Object.defineProperty(exports, "__esModule", { value: true });';
+        }
 
     } catch (er) {
         file.error({ message: er });
@@ -44,19 +48,6 @@ function compile(file) {
         sourcePath: inputFile
     });
 }
-
-// function buildTemplate(src, moduleName) {
-//
-//     return 'System.registerDynamic("' + moduleName + '.html", [], true, function(require, exports, module) {' +
-//         '         ; ' +
-//         '         var global = this, ' +
-//         '            __define = global.define; ' +
-//         '         global.define = undefined; ' +
-//         '         module.exports = "' + clean(src) +
-//         '         global.define = __define;' +
-//         '         return module.exports;' +
-//         '       });'
-// }
 
 function clean(src) {
     return src
