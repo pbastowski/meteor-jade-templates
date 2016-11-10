@@ -33,8 +33,8 @@ function compile(file) {
         output = jade.compile(content, jadeOpts)();
 
         if (output.trim()) {
-            output = 'exports.default = "' + clean(output) + '";' + '\n'
-            + 'module.exports = exports.default;' + '\n'
+            output = 'exports["def"+"ault"] = "' + clean(output) + '";' + '\n'
+            + 'module.exports = exports["def"+"ault"];' + '\n'
             + 'Object.defineProperty(exports, "__esModule", { value: true });';
         }
 
