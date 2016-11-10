@@ -35,7 +35,7 @@ export class App {
 
 ## Changelog
 
-### v0.0.5
+### v0.0.7
  
 Another fix for default imports problem when using a TypeScript package other than pbastowski:typescript.
  

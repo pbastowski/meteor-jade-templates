@@ -1,6 +1,6 @@
 Package.describe({
     name: 'pbastowski:jade-templates',
-    version: '0.0.6',
+    version: '0.0.7',
     summary: 'JADE templates for Meteor 1.3',
     git: 'https://github.com/pbastowski/meteor-jade-templates',
     documentation: 'README.md'
