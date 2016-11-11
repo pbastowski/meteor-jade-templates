@@ -34,7 +34,7 @@ function compile(file) {
 
         if (output.trim()) {
             output = 'exports["default"] = "' + clean(output) + '";' + '\n'
-            // + 'module.exports = exports["default"];' + '\n'
+            + 'module["exports"] = exports["default"];' + '\n'
             + 'Object.defineProperty(exports, "__esModule", { value: true });';
         }
 

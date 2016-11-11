@@ -35,6 +35,10 @@ export class App {
 
 ## Changelog
 
+### v0.0.8
+ 
+Rolled back the previous fix. Default exports, especially those done with module.exports, behave differently with TypeScript and Babel. Nothing I can do to fix this for the moment.
+
 ### v0.0.7
  
 Another fix for default imports problem when using a TypeScript package other than pbastowski:typescript.
